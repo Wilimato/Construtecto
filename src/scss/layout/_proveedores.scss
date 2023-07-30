@@ -1,0 +1,97 @@
+.no-webp .contenedor-proveedores {
+    background-image: url("../img/RENDER_6.jpg");
+}
+
+.webp .contenedor-proveedores {
+    background-image: url("../img/RENDER_6.webp");
+}
+
+.contenedor-proveedores {
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+
+    .imagen-content-proveedores {
+        width: 100%;
+        margin: 0 auto;
+
+        .imagen-content {
+            img {
+                width: 30rem;
+                margin: 1rem;
+                filter: drop-shadow(2px -1px 1px rgba(255, 255, 255, 1));
+            }
+        }
+
+    }
+
+    .contenedor-texto-proveedores {
+        width: 100%;
+        margin: 0 auto;
+        padding: 5rem 0;
+
+        @include desktop {
+            width: 70%;
+            padding: 5rem;
+        }
+    }
+
+    h2 {
+        font-size: 4rem;
+        font-weight: $black;
+        color: $blanco;
+        margin: 0 2rem 0 2rem;
+    }
+
+    p {
+        font-size: 1.8rem;
+        color: $blanco;
+        text-align: center;
+        margin: 0 2rem 0 2rem;
+    }
+}
+
+.background-proveedores {
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    width: 100%;
+}
+
+.content-principal-proveedores {
+    margin: 5rem 0;
+}
+
+//slider proveedores
+
+.carrusel {
+    margin: auto 0;
+    display: flex;
+    align-items: center;
+
+}
+
+.carrusel-items {
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.carrusel-item {
+    min-width: 300px;
+    max-width: 300px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.carrusel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carrusel-item:hover {
+    transform: scale(1.2);
+}

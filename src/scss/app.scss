@@ -1,0 +1,32 @@
+/*Base*/
+
+@import 'base/normalize';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/globales';
+@import 'base/utilidades';
+@import 'base/botones';
+@import 'base/darkMode';
+
+/**UI**/
+
+@import "layout/footer";
+@import "layout/header";
+@import "layout/navegacion";
+@import "layout/iconos.scss";
+@import "layout/anuncios";
+@import "layout/contactar";
+@import "layout/inferior";
+@import "layout/formulario";
+@import "layout/indexstyle";
+@import "layout/slider";
+@import "layout/scroll";
+@import "layout/redes";
+@import "layout/propiedades";
+@import "layout/proveedores";
+@import "layout/iconos-fixed";
+@import "layout/servicios";
+@import "layout/nosotros";
+
+/** Paginas Internas **/
+@import "internas/admin";

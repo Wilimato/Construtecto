@@ -1,0 +1,42 @@
+.no-webp .imagen-contacto {
+   background-image: url("../img/RENDER_77.jpg");
+}
+
+.webp .imagen-contacto {
+   background-image: url("../img/RENDER_77.webp");
+}
+
+.img-contact {
+   border-radius: 1rem;
+}
+
+.imagen-contacto {
+   background-position: center center;
+   background-size: cover;
+   padding: calc($separacion * 2) 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   .imagen-content {
+      img {
+         width: 6rem;
+         margin: 1rem;
+      }
+   }
+
+   h2 {
+      font-size: 4rem;
+      font-weight: $black;
+      color: $blanco;
+      margin: 0 2rem 0 2rem;
+   }
+
+   p {
+      font-size: 1.8rem;
+      color: $blanco;
+      text-align: center;
+      margin: 0 2rem 0 2rem;
+   }
+}

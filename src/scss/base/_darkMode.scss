@@ -1,0 +1,83 @@
+.dark-mode {
+    background-color: darken($negro, 10);
+
+    p {
+        color: $blanco
+    }
+
+    .card-content-propiedades,
+    .card-content {
+        h2 {
+            color: $negro;
+        }
+
+        p {
+            color: $grisOscuro;
+        }
+    }
+
+    .each-servicios {
+        p {
+            color: $negro;
+        }
+
+        &:hover {
+            box-shadow: -1px 1px 10px 5px rgba(255, 255, 255, 0.5) !important;
+        }
+
+    }
+
+    a,
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: $gris;
+    }
+
+    .anuncio {
+        background-color: $grisOscuro;
+        border: 1px solid $grisOscuro;
+
+    }
+
+    .precio {
+        color: $azul;
+    }
+
+    .iconos-caracteristicas {
+        li img {
+            filter: invert(100%);
+        }
+    }
+
+    .texto-nosotros blockquote {
+        color: $blanco;
+    }
+
+    .formulario {
+
+        label,
+        legend,
+        p {
+            color: $grisOscuro;
+        }
+
+        input:not([type="submit"]),
+        textarea,
+        select {
+            background-color: $grisOscuro;
+            border: 1px solid $grisOscuro;
+            color: $gris;
+        }
+    }
+
+    table.propiedades {
+        color: $blanco;
+    }
+
+    .content-arqui {
+        background-color: $grisOscuro;
+        border: 1px solid white;
+    }
+}

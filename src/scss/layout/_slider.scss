@@ -1,0 +1,263 @@
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 600px;
+    /* Cambio de 100vh a 700px */
+    color: $blanco;
+}
+
+.left-slide {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0rem;
+    transition: transform 0.5s ease-in-out;
+
+
+    @include desktop {
+        width: 35%;
+    }
+
+
+}
+
+.left-slide>div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.left-slide {
+    h1 {
+
+        font-size: 30px;
+        margin-bottom: 40px;
+        margin-top: -30px;
+
+        @include desktop {
+            font-size: 40px;
+            margin-bottom: 10px;
+            margin-top: -30px;
+        }
+    }
+
+    p {
+        display: none;
+
+        @include desktop {
+            display: block;
+            text-align: center;
+            font-size: 1.6rem;
+            color: $blanco;
+            margin: 0 5rem;
+        }
+    }
+}
+
+.right-slide {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 65%;
+    transition: transform 0.5s ease-in-out;
+
+    @include desktop {
+        left: 35%;
+    }
+}
+
+.right-slide>div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    background-color: #fff;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 15px;
+}
+
+button:hover {
+    color: #222;
+}
+
+button:focus {
+    outline: none;
+}
+
+.slider-container .action-buttons button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 100;
+
+    @include desktop {
+        left: 35%;
+    }
+}
+
+.slider-container .action-buttons .down-button {
+    transform: translateX(-100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.slider-container .action-buttons .up-button {
+    transform: translateY(-100%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+//slider Anuncios
+.slider-container-2 {
+    width: 100%;
+    padding: 30px 0;
+}
+
+.slider-content {
+    margin: 0 40px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.card {
+    border-radius: 2.5rem;
+    background-color: $blanco;
+}
+
+.image-content,
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+
+.imagen-content {
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $grisOscuro;
+    border-radius: 25px 25px 0 25px;
+}
+
+.overlay::before,
+.overlay::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -4rem;
+    height: 4rem;
+    width: 4rem;
+    background-color: $grisOscuro;
+
+}
+
+.overlay::after {
+    border-radius: 0 25px 0 0;
+    background-color: $blanco;
+}
+
+.card-image {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    padding: 0.6rem;
+    background: $blanco;
+}
+
+.card-image .card-img {
+    height: 100%;
+    width: 100%;
+    margin: -0.4rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid $grisOscuro;
+
+}
+
+.name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+.description {
+    font-size: 1.4rem;
+    color: #707070;
+    text-align: center;
+    max-height: 10rem;
+    overflow: hidden;
+}
+
+.swiper-navBtn {
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.swiper-navBtn:hover {
+    box-shadow: black;
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+    font-size: 35px;
+}
+
+.swiper-button-next {
+    right: 1rem;
+}
+
+.swiper-button-prev {
+    left: 1rem;
+}
+
+.swiper-pagination-bullet {
+    background-color: $grisOscuro;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: $grisOscuro;
+}
+
+.card-propiedades {
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .slide-content {
+        margin: 0 10px;
+    }
+
+    .swiper-navBtn {
+        display: none;
+    }
+
+}
+

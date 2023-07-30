@@ -1,0 +1,52 @@
+/* Define a CSS variable */
+:root {
+    --grisOscuro: #333;
+    /* Replace #333 with your desired dark gray color value */
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+/* Styles for the scrollbar */
+html {
+    scrollbar-width: thin;
+    /* For Firefox */
+}
+
+html::-webkit-scrollbar {
+    width: 0.8rem;
+    /* For WebKit browsers (Safari, etc.) */
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+    /* For WebKit browsers (Safari, etc.) */
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--grisOscuro);
+    /* Use the CSS variable */
+    border-radius: 5rem;
+}
+
+/* For Firefox */
+html::-moz-scrollbar {
+    width: 0.8rem;
+}
+
+html::-moz-scrollbar-track {
+    background: transparent;
+}
+
+html::-moz-scrollbar-thumb {
+    background: var(--grisOscuro);
+    border-radius: 10rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}

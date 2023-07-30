@@ -1,0 +1,67 @@
+.no-webp .inicio {
+    background-image: url(../img/construtecto-perfil.jpg);
+}
+
+.webp .inicio {
+    background-image: url(../img/construtecto-perfil.webp);
+}
+
+.header {
+    background-color: $grisOscuro;
+
+    img {
+        width: 150px;
+        margin: 0 50px 20px 50px;
+    }
+
+    &.inicio {
+        background-position: center center;
+        background-size: cover;
+
+        @include tablet {
+            min-height: 80rem;
+        }
+
+        .contenido-header {
+            @include tablet {
+                min-height: 80rem;
+            }
+        }
+
+    }
+
+}
+
+.inicio .background-inicio {
+    background-color: rgba($color: #000000, $alpha: 0.7);
+}
+
+.contenido-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    h1 {
+        margin-left: 5rem;
+        margin-right: 5rem;
+        color: $blanco;
+        font-size: 3rem;
+
+        @include tablet {
+            font-size: 4rem;
+        }
+
+        @include desktop {
+            text-align: left;
+            color: $blanco;
+            font-weight: $bold;
+            line-height: 2;
+            max-width: 60rem;
+            margin-left: 0;
+            margin-right: 0;
+            font-size: 4rem;
+        }
+    }
+}
+

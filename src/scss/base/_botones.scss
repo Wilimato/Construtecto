@@ -1,0 +1,46 @@
+.boton-amarillo {
+    @include boton($grisOscuro, inline-block);
+}
+
+.boton-amarillo-block {
+    @include boton($gris, block);
+}
+
+.boton-gris {
+    @include boton($grisOscuro, inline-block);
+}
+
+.boton-rojo-block {
+    @include boton($rojo, block);
+    width: 100%;
+}
+
+.boton-gris-block {
+    @include boton($azul, block);
+}
+
+.boton-negro {
+    @include boton(black, block, 1px solid white);
+
+    margin: 2rem;
+
+    &:hover {
+        background-color: lighten(black, 20);
+    }
+}
+
+.button-slider {
+    border: none;
+    font-size: 1.6rem;
+    color: $blanco;
+    padding: 8px 16px;
+    background-color: $grisOscuro;
+    border-radius: 0.6rem;
+    margin: 14px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: lighten($grisOscuro, 20);
+        box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.5)
+    }
+}

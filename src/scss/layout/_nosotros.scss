@@ -1,0 +1,51 @@
+.contenido-nosotros {
+    display: flex;
+    flex-direction: column;
+
+    img {
+        margin: 5rem 0;
+        border-radius: 1rem;
+    }
+}
+
+.texto-nosotros {
+    blockquote {
+        text-align: center;
+        font-weight: $black;
+        font-size: 2.2rem;
+        margin: 3rem 0 0 0;
+        padding-left: 1rem 0 3rem 0;
+    }
+
+    p {
+        text-align: center;
+    }
+
+
+}
+
+.content-arqui {
+    @include grid(2, 2rem);
+    background-color: $blanco;
+    border-radius: 1rem;
+
+    justify-content: center;
+    align-items: center;
+
+    p {
+        margin: 5rem;
+    }
+
+    .arquitecto-content-img {
+        display: flex;
+        justify-content: center;
+        background-color: $negro;
+        border-radius: 0 1rem 1rem 0;
+
+
+        img {
+            width: 40rem;
+        }
+    }
+
+}
