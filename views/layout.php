@@ -19,12 +19,16 @@ if (!isset($inicio)) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Construtecto</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Option 1: Include in HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <!----Swiper CSS---->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="../build/css/app.css">
-    <link rel="icon" href="../build/img/logo-mini.png" type="image/x-icon">
+    <link rel="stylesheet" href="/build/css/app.css">
+    <link rel="icon" href="/build/img/logo-mini.png" type="image/x-icon">
 
 
 </head>
@@ -46,19 +50,19 @@ if (!isset($inicio)) {
 
                     <div class="derecha">
                         <nav class="navegacion">
-                            <a href="/">Inicio</a>
+                            <a href="/">Inicio</>
                             <a href="/nosotros">Quienes somos</a>
                             <?php echo $inicio ? "<a href='#servicios'>Servicios</a>" : ""; ?>
                             <a href="/propiedades">Proyectos</a>
-                            <a href="/blog">Blog</a>
-                            <a href="/contacto">Contactos</a>
+                            <?php echo $inicio ? "<a href='#main'>Contactos</a>" : ""; ?>
+                            
                             <?php if ($auth) : ?>
                                 <a href="/admin">Administrar Productos</a>
                                 <a href="/logout">Cerrar Sección</a>
                             <?php endif ?>
-                            <div class="moon-dark">
+                           <!-- <div class="moon-dark">
                                 <img src="/build/img/dark-mode.svg" alt="boton dark mode" class="dark-mode-boton">
-                            </div>
+                            </div>-->
                         </nav>
                     </div>
                 </div>
@@ -73,7 +77,7 @@ if (!isset($inicio)) {
 
     <div class="whatsapp-icon">
         <a href="https://wa.me/+595973870444?text=desde%20la%20pagina%20web%20construtecto">
-            <img src="/build/img/whatsapp-icon.png" alt="whatsapp">
+            <img src="build/img/whatsapp-icon.png" alt="whatsapp">
         </a>
     </div>
 
@@ -88,8 +92,7 @@ if (!isset($inicio)) {
                     <a href="/nosotros">Quienes somos</a>
                     <a href="#servicios">Servicios</a>
                     <a href="/propiedades">Proyectos</a>
-                    <a href="/blog">Blog</a>
-                    <a href="/contacto">Contactos</a>
+                    <a href="#main">Contactos</a>
                 </nav>
             </div>
             <div class="contenedor contenedor-footer">
@@ -100,10 +103,8 @@ if (!isset($inicio)) {
             </div>
             <div class="contenedor contenedor-footer">
                 <p>Contáctenos:</p>
-                <a href="#">+595 666777</a>
-                <a href="#">+595 666777</a>
-                <a href="#">+595 666777</a>
-                <a href="#">Correo@correo.com</a>
+                <a href="#">(0984) 241 388</a>
+                <a href="#">construtectospy@gmail.com</a>
             </div>
             <div class="contenedor contenedor-footer">
                 <p>¡Visítanos!</p>
@@ -116,6 +117,7 @@ if (!isset($inicio)) {
         </div>
         <p class="copyright">Todos los derechos Reservados <?php echo date("Y"); ?> &copy;</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="../build/js/bundle.min.js"></script>
 </body>

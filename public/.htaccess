@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /construtecto/public
+
+# Permitir acceso a la carpeta public
+RewriteRule ^ - [L]
+
+# Redirigir todas las solicitudes a index.php, si no corresponde a un archivo o carpeta existente
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L]

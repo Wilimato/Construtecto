@@ -1,4 +1,4 @@
-<main class="contenedor">
+<main id="main" class="contenedor">
     <h1>Contacto</h1>
 
     <?php
@@ -8,49 +8,77 @@
     <?php
     }
     ?>
-    <picture>
-        <source srcset="build/img/RENDER_CONTACT.webp" type="image/webp">
-        <source srcset="build/img/RENDER_CONTACT.jpg" type="image/jpeg">
-        <img class="img-contact" src="build/img/RENDER_CONTACT.jpg" alt="destacada3">
-    </picture>
 
-    <h2>Llene el formulario de contacto</h2>
-    <form class="formulario" action="/contacto" method="POST">
-        <fieldset>
-            <label for="nombre">Nombre</label>
-            <input type="text" placeholder="Tu Nombre" id="nombre" name="contacto[nombre]">
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+    <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+    </div>
+    </div><!-- End Breadcrumbs -->
 
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="contacto[mensaje]"></textarea>
-        </fieldset>
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <fieldset>
-            <label for="opciones">Vende o Compra:</label>
-            <select id="opciones" name="contacto[tipo]">
-                <option value="" disabled selected>--Seleccione--</option>
-                <option value="compra">Compra</option>
-                <option value="vende">Vende</option>
-            </select>
+            <div class="row gy-4">
+                <div class="col-lg-6">
+                    <div class="info-item d-flex flex-column justify-content-center align-items-center contacto-background">
+                        <i class="bi bi-map"></i>
+                        <h3>Nuestra Dirección</h3>
+                        <p>Sobre la calle: C. Aquidaban, Presidente Franco</p>
+                    </div>
+                </div><!-- End Info Item -->
 
-            <label for="presupuesto">Precio o Presupuesto</label>
-            <input type="number" placeholder="Tu Precio o Presupuesto" id="presupuesto" name="contacto[precio]">
-        </fieldset>
+                <div class="col-lg-3 col-md-6">
+                    <div class="info-item d-flex flex-column justify-content-center align-items-center contacto-background">
+                        <i class="bi bi-envelope"></i>
+                        <h3>Email</h3>
+                        <p>construtectospy@gmail.com</p>
+                    </div>
+                </div><!-- End Info Item -->
 
-        <fieldset>
-            <p>Como desea ser contactado</p>
-            <div class="forma-contacto">
-                <label for="contactar-telefono">Teléfono</label>
-                <input type="radio" value="telefono" id="contactar-telefono" name="contacto[contacto]">
+                <div class="col-lg-3 col-md-6">
+                    <div class="info-item d-flex flex-column justify-content-center align-items-center contacto-background">
+                        <i class="bi bi-telephone"></i>
+                        <h3>Llamanos</h3>
+                        <p>(0984) 241 388</p>
+                    </div>
+                </div><!-- End Info Item -->
 
-                <label for="contactar-email">E-mail</label>
-                <input type="radio" value="email" id="contactar-email" name="contacto[contacto]">
             </div>
 
-            <div id="contacto"></div>
+            <div class="row gy-4 mt-1">
 
-        </fieldset>
+                <div class="col-lg-6 ">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1070.1352048734686!2d-54.60758985965699!3d-25.55529237316649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f691baace079ab%3A0x63407ea8c20c7766!2sCONSTRUTECTO!5e0!3m2!1ses!2spy!4v1689904074540!5m2!1ses!2spy" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+                </div><!-- End Google Maps -->
 
-        <input type="submit" value="Enviar" class="boton-gris">
+                <div class="col-lg-6">
+                    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                        <div class="row gy-4">
+                        <div class="col-lg-6 form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Tu Nombre" required>
+                        </div>
+                        <div class="col-lg-6 form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Tu Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Título" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
+                    </div>
+                    <div class="my-3">
+                        <div class="loading">Loading</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message">Your message has been sent. Thank you!</div>
+                    </div>
+                    <div class="text-center"><button type="submit">Send Message</button></div>
+                    </form>
+                </div><!-- End Contact Form -->
 
-    </form>
+            </div>
+
+        </div>
+    </section><!-- End Contact Section -->
 </main>

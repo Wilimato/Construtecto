@@ -95,9 +95,55 @@
     ?>
 </section>
 
-<main id="main" class="contenedor">
-    <h1>Contacto</h1>
+<div class="contenedor">
+    <section class="blog">
+        <h3>Nuestro Blog</h3>
+        <article class="entrada-blog">
+            <div class="imagen">
+                <picture>
+                    <source srcset="build/img/blog1.webp" type="image/webp">
+                    <source srcset="build/img/blog1.jpg" type="image/jpeg">
+                    <img loading="lazy" src="build/img/blog1.jpg" alt="Texto Entrada Blog">
+                </picture>
+            </div>
+            <div class="texto-entrada">
+                <a href="/entrada">
+                    <h4>Terraza en el techo de tu casa</h4>
+                    <p>Escrito el: <span>20/10/2022</span> por: <span>Admin</span></p>
 
+                    <p>Consejos para construir una terraza en el techo de tu casa con los mejores materiales y ahorrando dinero</p>
+                </a>
+            </div>
+        </article>
+        <!---Fin de entrada blog-->
+
+        <article class="entrada-blog">
+            <div class="imagen">
+                <picture>
+                    <source srcset="build/img/blog2.webp" type="image/webp">
+                    <source srcset="build/img/blog2.jpg" type="image/jpeg">
+                    <img loading="lazy" src="build/img/blog2.jpg" alt="Texto Entrada Blog">
+                </picture>
+            </div>
+            <div class="texto-entrada">
+                <a href="/entrada">
+                    <h4>Guia para la decoracion de tu hogar</h4>
+                    <p>Escrito el: <span>20/10/2022</span> por: <span>Admin</span></p>
+
+                    <p>Maxima el espacio de tu hogar con esta guia, aprende a combinar muebles y colores para darle vida a tu espacio</p>
+                </a>
+            </div>
+        </article>
+        <!---Fin de entrada blog-->
+        <div class="alinear-derecha">
+            <a href="/blog" class="boton-gris">Ver Todas</a>
+        </div>
+    </section>
+    <!--Fin Section Blog-->
+
+</div>
+
+<main class="contenedor dark-color">
     <?php
     if ($mensaje) {
     ?>
@@ -105,78 +151,46 @@
     <?php
     }
     ?>
+    <h2>Llene el formulario de contacto</h2>
+    <form class="formulario" action="/" method="POST">
+        <fieldset>
+            <label for="nombre">Nombre</label>
+            <input type="text" placeholder="Tu Nombre" id="nombre" name="contacto[nombre]">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
-        <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
-        </div>
-    </div><!-- End Breadcrumbs -->
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="contacto[mensaje]"></textarea>
+        </fieldset>
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <fieldset>
+            <label for="opciones">Selecciona el Servicio de tu interés:</label>
+            <select id="opciones" name="contacto[tipo]">
+                <option value="" disabled selected>--Seleccione--</option>
+                <option value="anteproyecto">Anteproyecto</option>
+                <option value="proyecto ejecutivo">Proyecto Ejecutivo</option>
+                <option value="diseño de interior">Diseño de Interior</option>
+                <option value="topografía">Topografía</option>
+                <option value="fiscalización de obra">Fiscalización de Obra</option>
+                <option value="construcción">Construcción</option>
+                <option value="Reforma">Reforma</option>
+                <option value="materiales de construcción">Materiales de Construcción</option>
+            </select>
+        </fieldset>
 
-            <div class="row gy-4">
-                <div class="col-lg-6">
-                    <div class="info-item d-flex flex-column justify-content-center align-items-center contacto-background">
-                        <i class="bi bi-map"></i>
-                        <h3>Nuestra Dirección</h3>
-                        <p>Sobre la calle: C. Aquidaban, Presidente Franco</p>
-                    </div>
-                </div><!-- End Info Item -->
+        <fieldset>
+            <label>Como desea ser contactado</label>
+            <div class="forma-contacto">
+                <label for="contactar-telefono">Teléfono</label>
+                <input type="radio" value="telefono" id="contactar-telefono" name="contacto[contacto]">
 
-                <div class="col-lg-3 col-md-6">
-                    <div class="info-item d-flex flex-column justify-content-center align-items-center contacto-background">
-                        <i class="bi bi-envelope"></i>
-                        <h3>Email</h3>
-                        <p>construtectospy@gmail.com</p>
-                    </div>
-                </div><!-- End Info Item -->
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="info-item d-flex flex-column justify-content-center align-items-center contacto-background">
-                        <i class="bi bi-telephone"></i>
-                        <h3>Llamanos</h3>
-                        <p>(0984) 241 388</p>
-                    </div>
-                </div><!-- End Info Item -->
-
+                <label for="contactar-email">E-mail</label>
+                <input type="radio" value="email" id="contactar-email" name="contacto[contacto]">
             </div>
 
-            <div class="row gy-4 mt-1">
+            <div id="contacto"></div>
 
-                <div class="col-lg-6 ">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1070.1352048734686!2d-54.60758985965699!3d-25.55529237316649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f691baace079ab%3A0x63407ea8c20c7766!2sCONSTRUTECTO!5e0!3m2!1ses!2spy!4v1689904074540!5m2!1ses!2spy" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
-                </div><!-- End Google Maps -->
+        </fieldset>
 
-                <div class="col-lg-6">
-                    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                        <div class="row gy-4">
-                            <div class="col-lg-6 form-group">
-                                <input type="text" name="name" class="form-control" id="name" placeholder="Tu Nombre" required>
-                            </div>
-                            <div class="col-lg-6 form-group">
-                                <input type="email" class="form-control" name="email" id="email" placeholder="Tu Email" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Título" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
-                        </div>
-                        <div class="my-3">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
-                        </div>
-                        <div class="text-center"><button type="submit">Send Message</button></div>
-                    </form>
-                </div><!-- End Contact Form -->
+        <input type="submit" value="Enviar" class="boton-gris">
 
-            </div>
-
-        </div>
-    </section><!-- End Contact Section -->
-</main>
+    </form>
 </main>

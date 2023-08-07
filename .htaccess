@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Si la solicitud corresponde a un archivo o carpeta existente, no hacer la redirección.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirigir todas las demás solicitudes a la carpeta "public".
+RewriteRule ^(.*)$ public/$1 [L]
